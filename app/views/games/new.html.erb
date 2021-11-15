@@ -1,0 +1,14 @@
+<p>New Game</p>
+
+
+<%# <% @letters.each do | letter | %>
+<%# <%= letter %>
+<%# <% end %>
+<h2 class=agora ><%= @letters.join(" ") %></h2>
+
+<form class="treta" action="/score" method="post">
+  <input class="xoxota" type="text" name="answer" placeholder="Type a Word">
+  <input type="submit" value="Ask!">
+<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+<%= hidden_field_tag :grid, @letters %>
+</form>
